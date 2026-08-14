@@ -85,6 +85,30 @@ const ja = {
       { title: "CONTEMPORARY", body: "無機質で、都会的なデザイン。" }
     ]
   },
+  aboutStory: {
+    introHeading: "猫と、\nちゃんとカフェする。",
+    introBody:
+      "カフェ チロは、カフェで過ごす時間のすぐそばに、猫たちが暮らしている場所です。",
+    scenes: [
+      {
+        heading: "猫カフェを、\nもっとカフェらしく。",
+        body: "きちんと座って、コーヒーを飲む。まずは、カフェとして心地いい場所に。"
+      },
+      {
+        heading: "コーヒーを飲む。本を読む。\nそのすぐそばに、猫がいる。",
+        body: ""
+      },
+      {
+        heading: "猫との距離も、\n自分のペースで。",
+        body: "近くに来たら、こんにちは。眠っていたら、そっとそのまま。触れ合うことを目的にしなくてもいい。"
+      },
+      {
+        heading: "ここで、\n4匹と暮らしています。",
+        body: ""
+      }
+    ],
+    endingHeading: "4匹のことを、\nもう少し。"
+  },
   catsSection: {
     eyebrow: "CATS",
     heading: "4匹の猫たち。",

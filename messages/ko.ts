@@ -87,6 +87,30 @@ const ko: Dictionary = {
       { title: "CONTEMPORARY", body: "무기질의 도회적인 디자인." }
     ]
   },
+  aboutStory: {
+    introHeading: "고양이와,\n제대로 카페하기.",
+    introBody:
+      "카페 치로는 카페에서 보내는 시간 바로 곁에, 고양이들이 살고 있는 곳입니다.",
+    scenes: [
+      {
+        heading: "고양이 카페를,\n조금 더 카페답게.",
+        body: "제대로 앉아서 커피를 마신다. 먼저, 카페로서 기분 좋은 공간으로."
+      },
+      {
+        heading: "커피를 마신다. 책을 읽는다.\n그 바로 곁에, 고양이가 있다.",
+        body: ""
+      },
+      {
+        heading: "고양이와의 거리도,\n나만의 속도로.",
+        body: "가까이 오면, 안녕. 자고 있으면, 그대로 살며시. 꼭 쓰다듬는 것이 목적이 아니어도 좋습니다."
+      },
+      {
+        heading: "이곳에서,\n네 마리와 살고 있습니다.",
+        body: ""
+      }
+    ],
+    endingHeading: "네 마리에 대해,\n조금 더."
+  },
   catsSection: {
     eyebrow: "CATS",
     heading: "네 마리의 고양이.",

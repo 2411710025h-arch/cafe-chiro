@@ -87,6 +87,30 @@ const en: Dictionary = {
       { title: "CONTEMPORARY", body: "An understated, urban design." }
     ]
   },
+  aboutStory: {
+    introHeading: "A café,\nwith cats.",
+    introBody:
+      "CAFE CHIRO is a place where cats live, right beside the time you spend in a café.",
+    scenes: [
+      {
+        heading: "A cat café,\nmade more like a café.",
+        body: "Sit down properly and have a coffee. First of all, a place that feels good simply as a café."
+      },
+      {
+        heading: "Have a coffee. Read a book.\nAnd right there, a cat.",
+        body: ""
+      },
+      {
+        heading: "How close you get,\nat your own pace.",
+        body: "If one comes near, say hello. If it's asleep, leave it be. Contact doesn't have to be the point."
+      },
+      {
+        heading: "Four cats\nlive here.",
+        body: ""
+      }
+    ],
+    endingHeading: "A little more\nabout the four."
+  },
   catsSection: {
     eyebrow: "CATS",
     heading: "Four cats.",
