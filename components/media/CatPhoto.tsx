@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 /**
- * Renders a real cat photo from /public. If the file is missing (or fails to
- * load) it removes itself so the silhouette layer beneath shows instead — so
- * the site never displays a broken image before the photos are added.
+ * Real cat photo from /public, served through next/image so Vercel optimises
+ * the large source PNGs into right-sized WebP/AVIF automatically. If the file
+ * is missing / fails to load, it removes itself so the silhouette layer beneath
+ * shows instead — the site never displays a broken image.
  */
 export function CatPhoto({
   src,
@@ -21,13 +23,13 @@ export function CatPhoto({
   const [failed, setFailed] = useState(false);
   if (failed) return null;
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <Image
       src={src}
       alt={alt}
-      loading="lazy"
+      fill
+      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
       onError={() => setFailed(true)}
-      className={`h-full w-full object-cover ${className}`}
+      className={`object-cover ${className}`}
       style={{ objectPosition: focus }}
     />
   );

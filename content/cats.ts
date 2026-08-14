@@ -40,7 +40,7 @@ export const cats: Cat[] = [
       ko: "카페 치로의 간판 고양이. 매장 이름 ‘치로’는 이 고양이에서 따왔습니다."
     },
     coat: "solid",
-    photo: "/cats/chiro.jpg",
+    photo: "/cats/chiro.png",
     focus: "50% 38%"
   },
   {
@@ -57,7 +57,7 @@ export const cats: Cat[] = [
       ko: "호기심이 왕성. 새로운 것을 발견하면 곧바로 확인하러 옵니다. 창가를 좋아합니다."
     },
     coat: "tabby",
-    photo: "/cats/nagi.jpg",
+    photo: "/cats/nagi.png",
     focus: "54% 30%"
   },
   {
@@ -74,7 +74,7 @@ export const cats: Cat[] = [
       ko: "네 마리 중 가장 활발. 노는 것을 좋아하고, 사람에게도 비교적 가까이 다가옵니다."
     },
     coat: "mid",
-    photo: "/cats/mugi.jpg",
+    photo: "/cats/mugi.png",
     focus: "50% 32%"
   },
   {
@@ -91,7 +91,7 @@ export const cats: Cat[] = [
       ko: "조용한 장소를 좋아합니다. 조금 높은 곳에서 매장을 바라보고 있을 때가 많습니다."
     },
     coat: "light",
-    photo: "/cats/tsuki.jpg",
+    photo: "/cats/tsuki.png",
     focus: "40% 34%"
   }
 ];
