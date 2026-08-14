@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="14" fill="#111111"/>
+  <g transform="translate(10.5,8) scale(0.335)">
+    <g fill="#ffffff">
+      <path d="M40 6 L36 46 L66 30 Z"/>
+      <path d="M88 6 L92 46 L62 30 Z"/>
+      <rect x="33" y="24" width="62" height="52" rx="21"/>
+      <path d="M41 64 C36 78 30 96 28 110 C26 122 29 132 29 132 L99 132 C99 132 102 122 100 110 C98 96 92 78 87 64 Z"/>
+      <path d="M96 132 C120 132 124 104 104 98 C118 106 112 124 92 124 Z"/>
+    </g>
+    <path d="M57 60 L71 60 L64 69 Z" fill="#111111"/>
+    <g stroke="#ffffff" stroke-width="2.4" stroke-linecap="round">
+      <line x1="33" y1="56" x2="9" y2="52"/>
+      <line x1="33" y1="63" x2="9" y2="66"/>
+      <line x1="95" y1="56" x2="119" y2="52"/>
+      <line x1="95" y1="63" x2="119" y2="66"/>
+    </g>
+  </g>
+</svg>
