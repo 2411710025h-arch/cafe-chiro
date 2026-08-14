@@ -17,7 +17,7 @@ export function MobileReserveBar() {
     <>
       {/* In-flow spacer so the fixed bar never covers footer content. */}
       <div aria-hidden className="h-[60px] lg:hidden" />
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-paper/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-md lg:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-paper/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-md lg:hidden">
         <div className="container-edge py-2.5">
           <Link
             href={localePath(locale, "reservation")}

@@ -40,85 +40,85 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper/80 backdrop-blur-md">
-      <div className="container-edge flex h-[--header-h] items-center justify-between gap-4">
-        <Link
-          href={localePath(locale)}
-          aria-label={`${dict.meta.brand} — ${dict.nav.home}`}
-          className="shrink-0"
-        >
-          <Logo />
-        </Link>
-
-        {/* Desktop nav */}
-        <nav
-          aria-label="Primary"
-          className="hidden items-center gap-7 lg:flex"
-        >
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.key}
-              href={localePath(locale, item.href)}
-              aria-current={isActive(item.href) ? "page" : undefined}
-              className={`text-[13px] tracking-wide transition-colors duration-250 ${
-                isActive(item.href)
-                  ? "text-ink"
-                  : "text-ink-muted hover:text-ink"
-              }`}
-            >
-              {dict.nav[item.key]}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden items-center gap-5 lg:flex">
-          <LanguageSwitch />
+    <>
+      <header className="sticky top-0 z-50 border-b border-line bg-paper/80 backdrop-blur-md">
+        <div className="container-edge flex h-[--header-h] items-center justify-between gap-4">
           <Link
-            href={localePath(locale, "reservation")}
-            className="btn btn-primary !px-5 !py-2.5"
+            href={localePath(locale)}
+            aria-label={`${dict.meta.brand} — ${dict.nav.home}`}
+            className="shrink-0"
           >
-            {dict.nav.reservationFull}
+            <Logo />
           </Link>
+
+          {/* Desktop nav */}
+          <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.key}
+                href={localePath(locale, item.href)}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={`text-[13px] tracking-wide transition-colors duration-250 ${
+                  isActive(item.href) ? "text-ink" : "text-ink-muted hover:text-ink"
+                }`}
+              >
+                {dict.nav[item.key]}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden items-center gap-5 lg:flex">
+            <LanguageSwitch />
+            <Link
+              href={localePath(locale, "reservation")}
+              className="btn btn-primary !px-5 !py-2.5"
+            >
+              {dict.nav.reservationFull}
+            </Link>
+          </div>
+
+          {/* Mobile trigger */}
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? dict.nav.closeMenu : dict.nav.openMenu}
+            className="relative z-[60] flex h-10 w-10 items-center justify-center lg:hidden"
+          >
+            <span className="sr-only">
+              {open ? dict.nav.closeMenu : dict.nav.openMenu}
+            </span>
+            <span className="relative block h-3 w-6">
+              <span
+                className={`absolute left-0 block h-px w-6 bg-ink transition-all duration-300 ${
+                  open ? "top-1.5 rotate-45" : "top-0"
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-1.5 block h-px w-6 bg-ink transition-opacity duration-200 ${
+                  open ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <span
+                className={`absolute left-0 block h-px w-6 bg-ink transition-all duration-300 ${
+                  open ? "top-1.5 -rotate-45" : "top-3"
+                }`}
+              />
+            </span>
+          </button>
         </div>
+      </header>
 
-        {/* Mobile trigger */}
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          aria-label={open ? dict.nav.closeMenu : dict.nav.openMenu}
-          className="relative z-50 flex h-10 w-10 items-center justify-center lg:hidden"
-        >
-          <span className="sr-only">
-            {open ? dict.nav.closeMenu : dict.nav.openMenu}
-          </span>
-          <span className="relative block h-3 w-6">
-            <span
-              className={`absolute left-0 block h-px w-6 bg-ink transition-all duration-300 ${
-                open ? "top-1.5 rotate-45" : "top-0"
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-1.5 block h-px w-6 bg-ink transition-opacity duration-200 ${
-                open ? "opacity-0" : "opacity-100"
-              }`}
-            />
-            <span
-              className={`absolute left-0 block h-px w-6 bg-ink transition-all duration-300 ${
-                open ? "top-1.5 -rotate-45" : "top-3"
-              }`}
-            />
-          </span>
-        </button>
-      </div>
-
-      {/* Mobile menu */}
+      {/* Mobile menu — sibling of <header> so the header's backdrop-filter
+          does NOT become its containing block (which would collapse it). */}
       <div
         id="mobile-menu"
         className={`fixed inset-x-0 bottom-0 top-[--header-h] z-40 bg-paper transition-opacity duration-300 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
+        style={{ backgroundColor: "var(--paper)" }}
+        aria-hidden={!open}
       >
         <nav
           aria-label="Mobile"
@@ -151,6 +151,6 @@ export function Header() {
           </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
