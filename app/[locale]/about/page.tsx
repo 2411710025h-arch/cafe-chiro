@@ -7,7 +7,7 @@ import { localePath } from "@/lib/paths";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
-import { Placeholder } from "@/components/media/Placeholder";
+import { Photo } from "@/components/media/Photo";
 
 export function generateMetadata({
   params
@@ -40,9 +40,10 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
 
       <Container className="pb-8">
         <Reveal>
-          <Placeholder
-            variant="interior"
-            tone="dim"
+          <Photo
+            src="/interior/space.png"
+            alt={`${dict.meta.brand} — interior`}
+            focus="50% 40%"
             className="aspect-[16/9] w-full"
             label="SPACE"
           />

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
-import { Placeholder } from "@/components/media/Placeholder";
+import { Photo } from "@/components/media/Photo";
 import { formatYen } from "@/content/menu";
 import { localePath } from "@/lib/paths";
 import type { Locale } from "@/lib/i18n/config";
@@ -24,8 +24,10 @@ export function MenuSection({ locale, dict }: { locale: Locale; dict: Dictionary
       <Container className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-10">
         <div className="order-2 lg:order-1 lg:col-span-6">
           <Reveal>
-            <Placeholder
-              variant="interior"
+            <Photo
+              src="/interior/cafe.png"
+              alt={`${dict.meta.brand} — café counter`}
+              focus="30% 50%"
               tone="soft"
               className="aspect-[5/4] w-full"
               label="CAFÉ"
