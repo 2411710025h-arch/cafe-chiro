@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/seo";
-import { AboutScrollStory } from "@/components/about/AboutScrollStory";
+import { AboutEditorial } from "@/components/about/AboutEditorial";
 
 export function generateMetadata({
   params
@@ -19,6 +19,8 @@ export function generateMetadata({
   );
 }
 
-export default function AboutPage() {
-  return <AboutScrollStory />;
+export default function AboutPage({ params }: { params: { locale: string } }) {
+  const locale: Locale = isLocale(params.locale) ? params.locale : "ja";
+  const dict = getDictionary(locale);
+  return <AboutEditorial locale={locale} dict={dict} />;
 }

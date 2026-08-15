@@ -186,19 +186,6 @@
   }
 }
 
-/* Page-level scroll snap — toggled by the ABOUT scroll story only while it is
- * mounted (class added/removed on <html> by the component). One scroll gesture
- * settles on the next full-screen scene. Disabled for reduced-motion users. */
-.snap-page {
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 0;
-}
-@media (prefers-reduced-motion: reduce) {
-  .snap-page {
-    scroll-snap-type: none;
-  }
-}
-
 /* Respect users who prefer reduced motion. */
 @media (prefers-reduced-motion: reduce) {
   html {
