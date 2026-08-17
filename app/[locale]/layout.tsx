@@ -8,8 +8,7 @@ import { locales, isLocale, localeHtmlLang } from "@/lib/i18n/config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileReserveBar } from "@/components/layout/MobileReserveBar";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import { SITE_URL, OG_IMAGE } from "@/lib/site";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -52,12 +51,14 @@ export function generateMetadata({
       title: `${dict.meta.siteName} — ${dict.meta.tagline}`,
       description: dict.meta.description,
       url: `/${locale}`,
-      locale
+      locale,
+      images: [OG_IMAGE]
     },
     twitter: {
       card: "summary_large_image",
       title: `${dict.meta.siteName} — ${dict.meta.tagline}`,
-      description: dict.meta.description
+      description: dict.meta.description,
+      images: [OG_IMAGE.url]
     },
     robots: { index: true, follow: true }
   };

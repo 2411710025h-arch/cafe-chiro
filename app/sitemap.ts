@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/lib/i18n/config";
 import { newsSeed } from "@/content/news.seed";
-
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import { SITE_URL as SITE } from "@/lib/site";
 
 // Public, indexable paths (reservation is noindex; admin is excluded).
 const PATHS = ["", "about", "cats", "menu", "price", "news", "access"];
